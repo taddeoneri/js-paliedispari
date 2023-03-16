@@ -22,10 +22,10 @@
     </div>
     <div class="box2">
         <h1 class="text-center py-3">Even or Odd</h1>
-        <select class="form-select my-3" aria-label="Default select example">
+        <select id="select" class="form-select my-3" aria-label="Default select example">
             <option selected>Choose even or odd</option>
-            <option value="1">Even</option>
-            <option value="2">Odd</option>
+            <option value="Even">Even</option>
+            <option value="Odd">Odd</option>
         </select>
             <label for="numberUser" class="form-label">Choose a number between 1 and 5</label>
             <input type="number" class="form-control" id="numberUser">
@@ -33,6 +33,7 @@
                 <button type="button" class="btn btn-danger btnNumber2 d-block my-4">Random numer</button>           
             </div>
             <button type="submit" class="btn btn-primary btnWinner d-block my-2 mx-auto">Checked</button>
+            <h4 class="py-4" id="resultNumber"></h4>
     </div>
     <script src="./js/script.js"></script>
 </body>

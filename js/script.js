@@ -52,20 +52,27 @@ btnNumber2.addEventListener('click', function(){
 
 
 btnWinner.addEventListener('click', function(){
-    number1 = document.getElementById('numberUser').value
-    console.log(number1);
-    console.log(number2);
+    number1 = document.getElementById('numberUser').value;
+    const select = document.getElementById('select').value;
+    const resultNumber = document.getElementById('resultNumber');
+    console.log(select);
+    // console.log(number1);
     console.log(evenOdd(number1, number2));
-})
+    if(evenOdd(number1, number2) == select){
+        return resultNumber.innerHTML = 'User Winner'
+    }else{
+        return resultNumber.innerHTML = 'Computer Winner'
+    }
+});
 
 
-function addition(num1, num2){
-    return num1 + num2;
+function addition(number1, number2){
+    return number1 + number2;
 }
 
 
-function evenOdd(num1, num2){
-    if ((num1 + num2) % 2 == 0){
+function evenOdd(number1, number2){
+    if ((number1 + number2) % 2 == 0){
         return 'even';
     } else{
         return 'odd';
