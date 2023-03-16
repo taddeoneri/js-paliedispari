@@ -40,12 +40,10 @@ const btnNumber2 = document.querySelector('.btnNumber2');
 const btnWinner = document.querySelector('.btnWinner');
 
 let number1;
-let number2;
-
+let number2 = getRandomInt(1, 5);
 
 
 btnNumber2.addEventListener('click', function(){
-    number2 = getRandomInt(1, 6);
     return document.querySelector('.computer').innerHTML += 
     `
         <p class="px-4 mb-0">${number2}</p>
@@ -54,10 +52,25 @@ btnNumber2.addEventListener('click', function(){
 
 
 btnWinner.addEventListener('click', function(){
-    number1 = document.getElementById('numberUser').value;
+    number1 = document.getElementById('numberUser').value
     console.log(number1);
+    console.log(number2);
+    console.log(evenOdd(number1, number2));
 })
 
+
+function addition(num1, num2){
+    return num1 + num2;
+}
+
+
+function evenOdd(num1, num2){
+    if ((num1 + num2) % 2 == 0){
+        return 'even';
+    } else{
+        return 'odd';
+    }
+}
 
 
 function getRandomInt(min, max) {
