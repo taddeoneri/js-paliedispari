@@ -56,7 +56,8 @@ btnWinner.addEventListener('click', function(){
     const select = document.getElementById('select').value;
     const resultNumber = document.getElementById('resultNumber');
     console.log(select);
-    // console.log(number1);
+    console.log(number1);
+    console.log(number2);
     console.log(evenOdd(number1, number2));
     if(evenOdd(number1, number2) == select){
         return resultNumber.innerHTML = 'User Winner'
@@ -73,9 +74,9 @@ function addition(number1, number2){
 
 function evenOdd(number1, number2){
     if ((number1 + number2) % 2 == 0){
-        return 'even';
+        return 'Even';
     } else{
-        return 'odd';
+        return 'Odd';
     }
 }
 
