@@ -9,8 +9,8 @@
     <title>Palindroma e pari/dispari</title>
 </head>
 <body>
-    <div class="box">
-        <h1 class="text-center">Check if the word is a palindrome</h1>
+    <div class="box1">
+        <h1 class="text-center py-3">Check if the word is a palindrome</h1>
         <form>
             <div class="mb-3">
               <label for="word" class="form-label">Enter a word</label>
@@ -19,6 +19,20 @@
             <button type="submit" class="btn btn-primary btnReverse">Checked</button>
           </form>
           <h4 class="py-4" id="resultWord"></h4>
+    </div>
+    <div class="box2">
+        <h1 class="text-center py-3">Even or Odd</h1>
+        <select class="form-select my-3" aria-label="Default select example">
+            <option selected>Choose even or odd</option>
+            <option value="1">Even</option>
+            <option value="2">Odd</option>
+        </select>
+            <label for="numberUser" class="form-label">Choose a number between 1 and 5</label>
+            <input type="number" class="form-control" id="numberUser">
+            <div class="computer d-flex align-items-center">
+                <button type="button" class="btn btn-danger btnNumber2 d-block my-4">Random numer</button>           
+            </div>
+            <button type="submit" class="btn btn-primary btnWinner d-block my-2 mx-auto">Checked</button>
     </div>
     <script src="./js/script.js"></script>
 </body>
