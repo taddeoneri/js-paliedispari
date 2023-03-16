@@ -52,10 +52,10 @@ btnNumber2.addEventListener('click', function(){
 
 
 btnWinner.addEventListener('click', function(){
-    number1 = document.getElementById('numberUser').value;
     const select = document.getElementById('select').value;
     const resultNumber = document.getElementById('resultNumber');
-    console.log(select);
+    number1 = document.getElementById('numberUser').value;
+    // console.log(select);
     console.log(number1);
     console.log(number2);
     console.log(evenOdd(number1, number2));
@@ -67,15 +67,13 @@ btnWinner.addEventListener('click', function(){
 });
 
 
-function addition(number1, number2){
-    return number1 + number2;
-}
-
-
 function evenOdd(number1, number2){
-    if ((number1 + number2) % 2 == 0){
+    const somma = parseInt(number1) + parseInt(number2);
+    if (somma % 2 == 0){
+        
         return 'Even';
     } else{
+        
         return 'Odd';
     }
 }
